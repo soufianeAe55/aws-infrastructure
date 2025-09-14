@@ -71,7 +71,7 @@ jobs:
     - name: Configure AWS credentials with OIDC
       uses: aws-actions/configure-aws-credentials@v2
       with:
-        role-to-assume: arn:aws:iam::arn:aws:iam::138973100809:role/onwer
+        role-to-assume: arn:aws:iam::138973100809:role/onwer
         aws-region: eu-west-3
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
