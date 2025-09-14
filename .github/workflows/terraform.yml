@@ -87,17 +87,17 @@ jobs:
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
       run: terraform init
-      working-directory: aws-infrastructure/live/network
+      working-directory: live/network
 
       # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
       run: terraform fmt -check
-      working-directory: aws-infrastructure/live/network
+      working-directory: live/network
 
       # Generates an execution plan for Terraform
     - name: Terraform Plan
       run: terraform plan -input=false
-      working-directory: aws-infrastructure/live/network
+      working-directory: live/network
 
     - name: Wait 15 seconds ⏳
       run: sleep 15
@@ -107,5 +107,5 @@ jobs:
     - name: Terraform Apply
       if: github.ref == 'refs/heads/"master"' && github.event_name == 'push'
       run: terraform apply -auto-approve -input=false
-      working-directory: aws-infrastructure/live/network
+      working-directory: live/network
 
