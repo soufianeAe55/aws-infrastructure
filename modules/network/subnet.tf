@@ -4,6 +4,7 @@ resource "aws_subnet" "subnets" {
 
      vpc_id     = aws_vpc.vpc.id
      cidr_block = each.value.cidr
+     map_public_ip_on_launch = each.value.is_public
 
      tags = {
         Name = each.value.name
