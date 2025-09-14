@@ -1,6 +1,5 @@
 resource "aws_vpc" "vpc" {
 
-  name             =
   cidr_block       = local.vpc_cidr
 
   region          = "eu-west-3"
