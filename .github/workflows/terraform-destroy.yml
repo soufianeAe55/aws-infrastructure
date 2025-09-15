@@ -42,7 +42,10 @@
 #       with:
 #         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
-name: 'Terraform'
+name: 'Terraform-destroy'
+
+on:
+  workflow_dispatch:
 
 permissions:
   contents: read
