@@ -1,4 +1,4 @@
-resource "aws_subnet" "subnets" {
+/*resource "aws_subnet" "subnets" {
 
      for_each = {for subnet in local.subnets : subnet.name => subnet}
 
@@ -14,4 +14,4 @@ resource "aws_subnet" "subnets" {
         (each.value.is_public ? "kubernetes.io/role/elb" : "kubernetes.io/role/internal-elb") = "1"
      }
 
-}
+}*/
