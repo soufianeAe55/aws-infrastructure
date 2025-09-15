@@ -30,7 +30,7 @@ module "vpc" {
   enable_dns_hostnames   = true
   enable_dns_support     = true
 
-  enable_internet_gateway = true  # ✅ THIS enables IGW for public subnets
+  create_igw = true
 
   tags = {
     Terraform   = "true"
