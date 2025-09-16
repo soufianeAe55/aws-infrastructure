@@ -3,7 +3,7 @@ module "eks" {
   version = "~> 21.0"
 
   name               = "dev-cluster"
-  kubernetes_version = "1.30"
+  kubernetes_version = "1.33"
 
   # Optional
   endpoint_public_access = true
@@ -16,9 +16,9 @@ module "eks" {
 
   # EKS Managed Node Group(s)
   eks_managed_node_groups = {
-    user_np = {
+    eks_np = {
       # Starting on 1.30, AL2023 is the default AMI type for EKS managed node groups
-      instance_types = ["t3.medium"]
+      instance_types = ["t3.small"]
 
       min_size     = 1
       max_size     = 3
