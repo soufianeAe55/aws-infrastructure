@@ -19,7 +19,7 @@ module "eks" {
     dev_np = {
       # Starting on 1.30, AL2023 is the default AMI type for EKS managed node groups
       instance_types = ["t3.small"]
-
+      disk_size      = 40
       min_size     = 1
       max_size     = 3
       desired_size = 2
